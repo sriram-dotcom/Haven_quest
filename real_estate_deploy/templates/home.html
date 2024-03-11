@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% set active = "Home" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+<section class="jumbotron">
+    <div class="text-center">
+        <h1 class="jumbotron-heading">Haven Quest</h1>
+        <p class="lead text-muted">Discover your properties here</p>
+        <p><img class="img-fluid" src="/static/img/real_estate.jpg"></p>
+        <p>
+            <a href="https://professional.dce.harvard.edu/blog/real-estate-investing-for-beginners-5-skills-of-successful-investors/" class="btn btn-secondary my-2 mr-2">Learn about real estate</a>
+            <a href="/booking" class="btn btn-secondary my-2">Choose properties</a>
+        </p>
+    </div>
+</section>
+
+{% endblock %}

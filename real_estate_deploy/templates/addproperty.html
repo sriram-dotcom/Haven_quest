@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% set active = "Manage" %}
+
+{% block title %}
+Add a property
+{% endblock %}
+
+{% block content %}
+
+<h1 class="jumbotron-heading">Add a Property</h1>
+
+
+<form method="POST" action="/addproperty" class="pt-3">
+    <div class="form-group row">
+        <label for="example-text-input" class="col-2 col-form-label">Property Name</label>
+        <div class="col-4">
+            <input class="form-control" type="text" name="name">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-text-input" class="col-2 col-form-label">Description</label>
+        <div class="col-4">
+            <input class="form-control" type="text" name="description">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-text-input" class="col-2 col-form-label">Price</label>
+        <div class="col-4">
+            <input class="form-control" type="text" name="price">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-text-input" class="col-2 col-form-label">Address</label>
+        <div class="col-4">
+            <input class="form-control" type="text" name="address">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-text-input" class="col-2 col-form-label">City</label>
+        <div class="col-4">
+            <input class="form-control" type="text" name="city">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-text-input" class="col-2 col-form-label">Country</label>
+        <div class="col-4">
+            <input class="form-control" type="text" name="country">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-text-input" class="col-2 col-form-label">Image</label>
+        <div class="col-4">
+            <input class="form-control" type="text" name="image">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-4">
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

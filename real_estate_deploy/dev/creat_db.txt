@@ -1,0 +1,33 @@
+
+sqlite3 properties.db
+
+CREATE TABLE properties (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    description TEXT NOT NULL,
+    price INTEGER NOT NULL,
+    address TEXT NOT NULL,
+    city TEXT NOT NULL,
+    country TEXT NOT NULL,
+    image TEXT,
+    booked INTEGER NOT NULL
+);
+
+CREATE TABLE userDetails (
+    id INTEGER PRIMARY KEY,
+    userId INTEGER,-- FOREIGN KEY REFERENCES users(id),
+    propertyId INTEGER,-- FOREIGN KEY REFERENCES properties(id),
+    bookedOrOwned INTEGER NOT NULL, -- -1 for booked and 2 for owned
+    FOREIGN KEY (userId) REFERENCES users(id),
+    FOREIGN KEY (propertyId) REFERENCES properties(id)
+);
+
+.mode csv
+.import dev/real_estate_data.csv properties
+
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    username TEXT NOT NULL,
+    encrypted_password TEXT NOT NULL
+);
